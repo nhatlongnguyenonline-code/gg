@@ -25,7 +25,7 @@ except:
 if "ai_client" not in st.session_state:
     try:
         st.session_state.ai_client = genai.Client(api_key=API_KEY)
-        st.session_state.chat_session = st.session_state.ai_client.chats.create(model="gemini-3.6-flash")
+        st.session_state.chat_session = st.session_state.ai_client.chats.create(model="gemini-2.0-flash")
     except Exception as e:
         st.error(f"Lỗi kết nối bộ não AI: {e}")
 
